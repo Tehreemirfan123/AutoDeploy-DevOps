@@ -1,10 +1,12 @@
 # AutoDeploy — CI/CD & Cloud Deployment System
 
-AutoDeploy is a DevOps portfolio project that demonstrates automated testing, Docker-based CI/CD, cloud deployment, Linux server management, monitoring, and deployment automation.
+AutoDeploy will be a hands-on DevOps portfolio project designed to build practical experience with the complete deployment lifecycle. It will demonstrate how code moves from development to a running application through automated testing, Docker-based CI/CD, cloud deployment, Linux server management, monitoring, and deployment automation.
 
 ## Overview
 
-AutoDeploy demonstrates an automated DevOps deployment workflow where application deployment steps are streamlined using scripting and CI/CD concepts. I built it to practice automation, Linux, Git, and deployment fundamentals and understand how repetitive deployment tasks can be made faster and more reliable.
+This is how system will work:
+
+User push the code to GitHub → GitHub Actions automatically runs the tests → if the tests pass, Docker builds an image of the application → the image is pushed to a container registry → the cloud server pulls the new image and runs it → a health check confirms that the application is working correctly.
 
 ## Architecture
 
