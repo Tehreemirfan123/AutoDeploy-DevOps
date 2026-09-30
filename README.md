@@ -19,11 +19,54 @@ Python · FastAPI · PostgreSQL · SQLAlchemy · Linux · Bash · Git/GitHub · 
 ## Progress
 
 - [x] Environment & Git (WSL2, Ubuntu, Git, GitHub)
-- [ ] FastAPI application
+- [x] FastAPI application
 
 ## Local Setup
 
-_To be added._
+The project will be developed and tested locally using a Python virtual environment and Uvicorn.
+
+### 1. Create a Virtual Environment
+
+```bash
+python3 -m venv .venv
+```
+
+This creates an isolated Python environment named `.venv`. It keeps the project's dependencies separate from other Python projects on the system.
+
+### 2. Activate the Virtual Environment
+
+```bash
+source .venv/bin/activate
+```
+
+This activates the virtual environment so that Python and packages installed in the following steps are associated with this project.
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs all Python packages required by the project from the `requirements.txt` file.
+
+### 4. Start the Application
+
+```bash
+uvicorn app.main:app --reload
+```
+
+This starts the FastAPI application using Uvicorn, a Python ASGI server. The `--reload` option automatically restarts the server when code changes are detected during development.
+
+### 5. Open the API Documentation
+
+Once the server is running, open:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+This opens FastAPI's interactive Swagger UI, where the available API endpoints can be viewed and tested directly from the browser.
+
 
 ## Lessons Learned
 
